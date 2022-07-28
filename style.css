@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family: Gotham Rounded;
+}
+
+:root{
+    --neutral-bg: #0078aa;
+    --correct-bg: #3ec70b;
+    --wrong-bg: #eb1d36;
+}
+
+body{
+    --bg : var(--neutral-bg);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+}
+
+body.correct{
+    --bg:var(--correct-bg);
+}
+
+body.wrong{
+    --bg:var(--wrong-bg);
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn{
+    --bg : var(--neutral-bg);
+    border: 1px solid var(--bg);
+    background-color: var(--bg);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: black;
+}
+
+.btn.correct{
+    --bg: var(--correct-bg);
+    color: black;
+}
+
+.btn.wrong{
+    --bg: var(--wrong-bg);
+    color: black;
+
+}
+
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
