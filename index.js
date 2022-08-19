@@ -15,7 +15,7 @@ let wrongQuestions = 0;
 startButton.addEventListener('click', startGame);
 
 function startGame () {
-    console.log("Started");
+    // console.log("Started");
     startButton.classList.add('hide');
     shuffeledQuestions = questions.sort((a, b) => Math.random()-0.5);
     currentQuestionIndex = 0;
@@ -46,7 +46,7 @@ function setNextQuestion(shuffeledQuestions, currentQuestionIndex){
 }
 
 function showQuestion(qData){
-    console.log(qData);
+    // console.log(qData);
     currentQestion = qData;
     questionElement.innerText = qData.question;
     let ans = "";
@@ -67,13 +67,14 @@ function showEndOfQuize(){
     result += outputSentence;
     answerButtonElement.innerHTML = result; //"This is the End of the Quize, Thank you for your Time...!";
     nextButton.classList.add('hide');
+    questionElement.classList.add('hide');
 }
 
 function selectAnswer(event){
     attemptedQuetions++;
     let userAnswer = event.target.innerText;
-    console.log(event.target.innerText);
-    console.log(currentQestion.answer);
+    // console.log(event.target.innerText);
+    // console.log(currentQestion.answer);
     if(checkforCorrectAnswer(userAnswer, currentQestion.answer)){
         correctQuetions++;
         background.classList.add('correct');
